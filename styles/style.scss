@@ -5,6 +5,15 @@ $border-color: rgba(20, 20, 240, .15);
     font-size: 2em;
 }
 
+#display {
+    border: .05em solid $border-color;
+    font-size: 2em;
+    text-align: right;
+    padding: .5em;
+    margin-bottom: 1em; 
+    overflow: hidden;  
+}
+
 button {
     border: .15em solid $border-color;
 }

@@ -1,62 +1,7 @@
-const contentGrid = document.querySelector("#content");
+import { createContent } from './initModule.js';
+import { updateDisplay } from './displayModule.js';
 
-const createButtons = () => {
-    const buttons = [];
-
-    for (let i = 0; i <= 9; i++) {
-        const button = document.createElement("button");
-        button.textContent = i;
-        const classButton = "numeric_button";
-        button.classList.add(classButton);
-        buttons.push(button);
-    }
-
-    const equalsButton = document.createElement("button");
-    equalsButton.textContent = "=";
-    const classEqualsButton = "equals_button"; 
-    equalsButton.classList.add(classEqualsButton);
-    buttons.push(equalsButton);
-
-    const operators = ["+", "-", "*", "/"];
-    operators.forEach(operator => {
-        const button = document.createElement("button");
-        button.textContent = operator;
-        const classOperatorButton = "operator_button"; // Adicione suas próprias classes aqui
-        button.classList.add(classOperatorButton);
-        buttons.push(button);
-    });
-
-    return buttons;
-};
-
-const createDivs = buttons => {
-    const divs = [];
-
-    const numericDiv = document.createElement("div");
-    numericDiv.classList.add("numeric_div");
-    numericDiv.classList.add("col-8");
-
-    buttons.forEach(button => numericDiv.appendChild(button));
-
-    const operatorDiv = document.createElement("div");
-    operatorDiv.classList.add("operator_div"); 
-    operatorDiv.classList.add("col-4");
-
-    buttons.filter(button => button.classList.contains("operator_button"))
-           .forEach(button => operatorDiv.appendChild(button));
-
-    divs.push(numericDiv, operatorDiv);
-
-    return divs;
-};
-
-const createContent = () => {
-    const buttons = createButtons();
-    const divs = createDivs(buttons);
-
-    divs.forEach(div => {
-        contentGrid.appendChild(div);
-    });
-};
 
 createContent();
+
+updateDisplay("67890");
