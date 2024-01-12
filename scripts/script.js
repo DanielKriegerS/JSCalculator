@@ -13,7 +13,7 @@ const createButtons = () => {
 
     const equalsButton = document.createElement("button");
     equalsButton.textContent = "=";
-    const classEqualsButton = "equals_button";
+    const classEqualsButton = "equals_button"; 
     equalsButton.classList.add(classEqualsButton);
     buttons.push(equalsButton);
 
@@ -21,7 +21,7 @@ const createButtons = () => {
     operators.forEach(operator => {
         const button = document.createElement("button");
         button.textContent = operator;
-        const classOperatorButton = "operator_button";
+        const classOperatorButton = "operator_button"; // Adicione suas próprias classes aqui
         button.classList.add(classOperatorButton);
         buttons.push(button);
     });
@@ -34,11 +34,13 @@ const createDivs = buttons => {
 
     const numericDiv = document.createElement("div");
     numericDiv.classList.add("numeric_div");
+    numericDiv.classList.add("col-8");
 
     buttons.forEach(button => numericDiv.appendChild(button));
 
     const operatorDiv = document.createElement("div");
-    operatorDiv.classList.add("operator_div");
+    operatorDiv.classList.add("operator_div"); 
+    operatorDiv.classList.add("col-4");
 
     buttons.filter(button => button.classList.contains("operator_button"))
            .forEach(button => operatorDiv.appendChild(button));

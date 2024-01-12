@@ -9,9 +9,20 @@
 }
 
 .equals_button {
-    width: 50%;
+    width: 54%;
 }
 
-.numeric_div, .operator_div {
-    width: max-content;
+.operator_div {
+    display: flex;
+    flex-direction: column;
+}
+
+.numeric_div {
+    border-right: 1px dashed rgba(20, 20, 20, .6);
+}
+
+.numeric_button,
+.equals_button,
+.operator_button {
+    margin: 5px; 
 }
