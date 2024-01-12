@@ -1,0 +1,33 @@
+$border-color: rgba(20, 20, 240, .15); 
+
+#content {
+    border: .05em solid $border-color;
+    font-size: 2em;
+}
+
+button {
+    border: .15em solid $border-color;
+}
+
+.numeric_button {
+    width: 25%;
+}
+
+.equals_button {
+    width: 54%;
+}
+
+.operator_div {
+    display: flex;
+    flex-direction: column;
+}
+
+.numeric_div {
+    border-right: 1px dashed $border-color;
+}
+
+.numeric_button,
+.equals_button,
+.operator_button {
+    margin: 5px; 
+}

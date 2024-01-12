@@ -1,28 +1,33 @@
 #content {
-    border: 5px solid black;
-    max-width: fit-content;
-    font-size: 2em;
+  border: 0.05em solid rgba(20, 20, 240, 0.15);
+  font-size: 2em;
+}
+
+button {
+  border: 0.15em solid rgba(20, 20, 240, 0.15);
 }
 
 .numeric_button {
-    width: 25%;
+  width: 25%;
 }
 
 .equals_button {
-    width: 54%;
+  width: 54%;
 }
 
 .operator_div {
-    display: flex;
-    flex-direction: column;
+  display: flex;
+  flex-direction: column;
 }
 
 .numeric_div {
-    border-right: 1px dashed rgba(20, 20, 20, .6);
+  border-right: 1px dashed rgba(20, 20, 240, 0.15);
 }
 
 .numeric_button,
 .equals_button,
 .operator_button {
-    margin: 5px; 
+  margin: 5px;
 }
+
+/*# sourceMappingURL=style.css.map */
