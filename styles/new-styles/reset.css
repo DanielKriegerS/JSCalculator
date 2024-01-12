@@ -1,0 +1,11 @@
+* {
+    box-sizing: border-box;
+    margin: 0 auto;
+    padding: 0 auto;
+    color: rgba(240, 238, 244, 0.09);
+    font-family: 'Lemon', serif;
+}
+
+body {
+    background-color: rgba(100, 100, 100, .2);
+}
